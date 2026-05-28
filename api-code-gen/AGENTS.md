@@ -48,3 +48,15 @@ pnpm build   # 生产构建
 
 ## 配置说明
 API Key 配置在 `.env` 文件的 `VITE_DEEPSEEK_API_KEY` 字段
+
+## Coze 部署配置
+- 项目类型：`web`
+- 预览端口：`5000`
+- 构建命令：`pnpm run build`
+- 运行命令：`pnpm run preview`（开发）或 `serve dist -l 5000`（生产）
+- 子项目路径：`api-code-gen/`
+
+### Coze 文件
+- 根 `.coze`：`/workspace/projects/.coze`
+- 子项目 `.coze`：`/workspace/projects/api-code-gen/.coze`
+- 脚本目录：`/workspace/projects/api-code-gen/scripts/`

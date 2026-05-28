@@ -1,0 +1,12 @@
+[project]
+sub_id = "8f2a1b3c"
+name = "api-code-gen"
+requires = ["nodejs-24"]
+project_type = "web"
+
+[preview]
+preview_enable = "enabled"
+
+[dev]
+build = ["pnpm", "run", "build"]
+run = ["pnpm", "run", "preview"]

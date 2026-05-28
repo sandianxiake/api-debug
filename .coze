@@ -1,0 +1,17 @@
+[project]
+requires = ["nodejs-24"]
+project_type = "web"
+
+[preview]
+preview_enable = "enabled"
+
+[dev]
+build = ["bash", "api-code-gen/scripts/coze-preview-build.sh"]
+run = ["bash", "api-code-gen/scripts/coze-preview-run.sh"]
+
+[deploy]
+build = ["bash", "api-code-gen/scripts/coze-deploy-build.sh"]
+run = ["bash", "api-code-gen/scripts/coze-deploy-run.sh"]
+
+[subprojects]
+path = ["api-code-gen"]

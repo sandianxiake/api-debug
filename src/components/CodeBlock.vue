@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/github-dark.css';
+import 'highlight.js/styles/monokai.css';
 import type { ParsedCode } from '../utils/codeParser';
 
 const props = defineProps<{
@@ -63,11 +63,11 @@ const folderPath = computed(() => {
 
 <style scoped>
 .code-block {
-  border: 1px solid #e5e7eb;
+  border: 1px solid #3b3b3b;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 16px;
-  background: #1e1e1e;
+  background: #272822;
 }
 
 .code-header {
@@ -75,8 +75,8 @@ const folderPath = computed(() => {
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px;
-  background: #2d2d2d;
-  border-bottom: 1px solid #3d3d3d;
+  background: #3e3d32;
+  border-bottom: 1px solid #4e4b3f;
 }
 
 .file-info {
@@ -122,7 +122,7 @@ const folderPath = computed(() => {
   overflow-x: auto;
   font-size: 13px;
   line-height: 1.5;
-  background: #1e1e1e;
+  background: #272822;
 }
 
 .code-content code {

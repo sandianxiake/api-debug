@@ -36,6 +36,11 @@ async function handleSubmit(content: string) {
     isStreaming.value = false;
   }
 }
+
+// 处理 PDF 解析错误
+function handleError(message: string) {
+  error.value = message;
+}
 </script>
 
 <template>
@@ -57,7 +62,7 @@ async function handleSubmit(content: string) {
 
     <main class="main">
       <div class="left-panel">
-        <InputArea @submit="handleSubmit" />
+        <InputArea @submit="handleSubmit" @error="handleError" />
       </div>
       <div class="right-panel">
         <OutputArea :raw-content="rawContent" :is-streaming="isStreaming" />
